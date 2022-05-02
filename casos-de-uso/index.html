@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Casos de uso - Buzz</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Buzz</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Início</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../planejamento/" class="nav-link">Planejamento</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Modelagem dos requisitos <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Casos de uso</a>
+</li>
+                                    
+<li>
+    <a href="../requisitos/" class="dropdown-item">Requisitos</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../wireframe/" class="nav-link">Design</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../planejamento/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../requisitos/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#1-introducao" class="nav-link">1. Introdução</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#2-diagramas-de-casos-de-uso" class="nav-link">2. Diagramas de casos de uso</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#3-descricao-dos-casos-de-uso" class="nav-link">3. Descrição dos casos de uso</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="1-introducao">1. Introdução</h2>
+<p>
+    Os casos de uso são os veículos de captura de requisitos e servem de base para a definição de requisitos funcionais. Além de facilitarem a visualização da aplicação, ajudam na delimitação do sistema. Servem como meio de comunicação com usuários finais e clientes por oferecerem uma visão dinâmica e fechada do sistema. Outra característica dos casos de uso é a de servirem como base para a descoberta de objetos e servirem como ferramenta para a rastreabilidade de requisitos. Através deles pode-se definir a interface com o usuário, e ajudam na visualização de elementos desde requisitos funcionais até objetos e estruturas de componentes.
+</p>
+
+<p><br></p>
+<h2 id="2-diagramas-de-casos-de-uso">2. Diagramas de casos de uso</h2>
+<p>
+    Parte da modelagem de casos de uso envolve a criação de um diagrama de casos de uso, que é uma forma de mostrar o modelo sem entrar nos detalhes dos casos de uso propriamente ditos. O sistema geralmente é delimitado em um diagrama de casos de uso por um retângulo com o nome do sistema identificado. O retângulo é chamado de limite do sistema. Os elementos que fazem parte do sistema estão dispostos dentro do limite. Entidades externas que não são parte do sistema e que interagem com este são mostradas do lado de fora. O nome do sistema é necessário para completar o primeiro passo. O nome geralmente é demonstrativo do seu objetivo, uma vez que os participantes devem poder facilmente identificar o que eles esperam do sistema e onde ele começa e termina.
+</p>
+
+<p>
+    O conjunto de casos de uso representa todas as possíveis interações que serão descritas nos requisitos de sistema. Um diagrama de caso de uso possui os seguintes elementos:
+</p>
+
+<ul>
+<li><strong>Casos de uso:</strong> podem ser descritos elementos que representam uma sequência de ações requeridas pelo sistema;</li>
+<li><strong>Atores:</strong> podem ser qualquer coisa fora do sistema que troque informações com o mesmo, incluindo usuários e outros sistemas;</li>
+<li><strong>Contêineres:</strong> um contêiner contém casos de uso de um sistema (limite do sistema). Pacotes5 podem ser utilizados para conter casos de uso e/ou atores e inclusive outros contêineres;</li>
+<li><strong>Relacionamentos:</strong> existem vários tipos de relacionamentos como, por exemplo, o de associação, que liga casos de uso e atores, indicando a forma como interagem; relacionamentos que representem dependência, por exemplo, entre dois pacotes; relacionamentos entre casos de uso, como o de “extend” e “include”; assim como a generalização, que pode, por exemplo, indicar a herança de comportamento entre dois atores;</li>
+</ul>
+<p><br></p>
+<h3 id="21-exemplo-de-caso-de-uso">2.1 Exemplo de caso de uso</h3>
+<div>
+    <img width="800px" src="../assets/caso-de-uso.png">
+    <figcaption>Figura 1 - Caso de uso de exemplo</figcaption>
+</div>
+
+<p><br></p>
+<h3 id="22-casos-de-uso-modelados-para-o-buzz">2.2 Casos de uso modelados para o Buzz</h3>
+<div>
+    <img width="800px" src="../assets/caso-de-uso-real.png">
+    <figcaption>Figura 2 - Caso de uso modelado durante o desenvolvimento do projeto</figcaption>
+</div>
+
+<p><br></p>
+<h2 id="3-descricao-dos-casos-de-uso">3. Descrição dos casos de uso</h2>
+<h3 id="31-caso-1-fazer-cadastro">3.1 Caso 1: Fazer cadastro</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Caso 1</th>
+<th align="left">Informações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Descrição</td>
+<td align="left">Quando um usuário acessar o aplicativo pela primeira vez depois de sua instalação, o ator necessitará fazer o cadastro no aplicativo para poder utilizar o transporte</td>
+</tr>
+<tr>
+<td align="center">Ator(es)</td>
+<td align="left">Usuário</td>
+</tr>
+<tr>
+<td align="center">Pré-condições</td>
+<td align="left">Ter o aplicativo instalado em seu smartphone e ter acesso à internet</td>
+</tr>
+<tr>
+<td align="center">Fluxo</td>
+<td align="left">1 - ator precisa baixar o aplicativo <br> 2 - ator precisa abrir o aplicativo <br> 3 - O ator precisa inserir seus dados no formulário de cadastro <br> 4 - Se os dados inseridos forem válidos o usuário deverá concluir o cadastro</td>
+</tr>
+<tr>
+<td align="center">Pós-condições</td>
+<td align="left">O ator poderá fazer login sempre que precisar e ter acesso aos seus dados dentro do aplicativo</td>
+</tr>
+<tr>
+<td align="center">Rastreabilidade</td>
+<td align="left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-caso-2-fazer-login">3.2 Caso 2: Fazer login</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Caso 2</th>
+<th align="left">Informações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Descrição</td>
+<td align="left">O ator, ao iniciar o aplicativo, pode efetuar o login para utilizar o aplicativo</td>
+</tr>
+<tr>
+<td align="center">Ator(es)</td>
+<td align="left">Usuário</td>
+</tr>
+<tr>
+<td align="center">Pré-condições</td>
+<td align="left">Ter o aplicativo instalado, acesso a internet e já estar cadastrado no sistema</td>
+</tr>
+<tr>
+<td align="center">Fluxo</td>
+<td align="left">1  - o ator precisa abrir o aplicativo <br> 2 - O usuário deve inserir seu email e senha para acessar a carteirinha virtual</td>
+</tr>
+<tr>
+<td align="center">Pós-condições</td>
+<td align="left">O ator poderá utilizar o aplicativo</td>
+</tr>
+<tr>
+<td align="center">Rastreabilidade</td>
+<td align="left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-caso-3-ver-carteirinha-digital">3.3 Caso 3: Ver carteirinha digital</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Caso 3</th>
+<th align="left">Informações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Descrição</td>
+<td align="left">Ao acessar a tela inicial do aplicativo, o ator poderá visualizar sua carteirinha digital e o QR Code de acesso ao transporte</td>
+</tr>
+<tr>
+<td align="center">Ator(es)</td>
+<td align="left">Usuário</td>
+</tr>
+<tr>
+<td align="center">Pré-condições</td>
+<td align="left">O ator deve estar logado no aplicativo</td>
+</tr>
+<tr>
+<td align="center">Fluxo</td>
+<td align="left">1 - ator precisa abir o aplicativo <br> 2 - O ator precisa logar no sistema do aplicativo <br> 3 - Pode visualizar sua carteirinha digital na primeira tela ou o QR Code na tela de QR Code</td>
+</tr>
+<tr>
+<td align="center">Pós-condições</td>
+<td align="left">O ator poderá verificar todas as informações relacionadas a sua carteirinha digital</td>
+</tr>
+<tr>
+<td align="center">Rastreabilidade</td>
+<td align="left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-caso-4-ver-se-o-transporte-pode-partir">3.4 Caso 4: Ver se o transporte pode partir</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Caso 4</th>
+<th align="left">Informações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Descrição</td>
+<td align="left">Ao acessar a tela do Scanner de QR Code, o ator pode utilizar para ler o QR Code dos usuários do aplicativo que desejam entrar no transporte</td>
+</tr>
+<tr>
+<td align="center">Ator(es)</td>
+<td align="left">Motorista</td>
+</tr>
+<tr>
+<td align="center">Pré-condições</td>
+<td align="left">O ator deve estar logado no aplicativo e ter acesso a internet</td>
+</tr>
+<tr>
+<td align="center">Fluxo</td>
+<td align="left">1 - ator precisa abrir o aplicativo <br> 2 - ator precisa realizar o login no aplicativo <br> 3 - O ator clica no ícone do Scanner</td>
+</tr>
+<tr>
+<td align="center">Pós-condições</td>
+<td align="left">O ator já pode escanear o QR Code da carteirinha digital dos usuários do aplicativo</td>
+</tr>
+<tr>
+<td align="center">Rastreabilidade</td>
+<td align="left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="35-caso-5-controlar-quem-pode-usar-o-transporte">3.5 Caso 5: Controlar quem pode usar o transporte</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Caso 5</th>
+<th align="left">Informações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Descrição</td>
+<td align="left">Ao acessar o aplicativo o ator pode utilizar o aplicativo para escanear o QR Code dos usuários do sistema para verificar se os mesmos podem ou não utilizar o transporte</td>
+</tr>
+<tr>
+<td align="center">Ator(es)</td>
+<td align="left">Motorista</td>
+</tr>
+<tr>
+<td align="center">Pré-condições</td>
+<td align="left">O ator deve estar logado e ter acesso a internet</td>
+</tr>
+<tr>
+<td align="center">Fluxo</td>
+<td align="left">1 - o ator precisa abrir o aplicativo <br> 2 - o ator precisa logar no aplicativo <br> 3 - na tela inicial o ator clica no ícone do Scanner <br> 4 - o ator pode começar a escanear as carteirinhas digitais</td>
+</tr>
+<tr>
+<td align="center">Pós-condições</td>
+<td align="left">O ator pode barrar a entrada de quem não tiver permissão para utilizar o transporte</td>
+</tr>
+<tr>
+<td align="center">Rastreabilidade</td>
+<td align="left">-</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
